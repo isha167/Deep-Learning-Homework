@@ -36,8 +36,8 @@ The following steps were undertaken in cleaning the data
 1. Remove unnecessary columns EIN and NAME
 2. Review the number of unique entries in all columns to identify which ones could be reduced in number
    - Columns with large numbers of unique entries were `APPLICATION_TYPE`, `CLASSIFICATION` and `ASK_AMT`. `ASK_AMT` is the asked amount and so not suitable for reducing the number of categories  
-3. Bin all categories in `APPLICATION_TYPE` with fewer than 500 applications into an `Other` category  ![Application_type binning](img/application_type.png)
-4. Bin all categories in `CLASSIFICATION` with fewer than 100 applications into an `Other` category  ![Classification binning](img/classification.png)
+3. Bin all categories in `APPLICATION_TYPE` with fewer than 500 applications into an `Other` category 
+4. Bin all categories in `CLASSIFICATION` with fewer than 100 applications into an `Other` category  
 5. Convert categorical data to numeric with `pd.get_dummies`
 6. Split data into feature and target arrays
 7. Split data into train and test datasets
@@ -58,8 +58,6 @@ These model parameters were chosen as they had been most commonly used in previo
 
 Evaluating the model showed it had an accuracy of 0.728 and an AUC of 0.7297. This is a reasonable score, but below our target accuracy of 0.75. Therefore, steps were taken to try to improve the model performance.
 ![model1](https://user-images.githubusercontent.com/85182090/145055909-0d7de502-c59c-4c10-9977-ae9503f5efc1.JPG)
-
-
 
 
 ### Optimisation 1: Increasing processing by increasing epochs
